@@ -3,5 +3,6 @@ datetime
 gtts
 playsound==1.2.2
 firebase_admin
-gi
+vext.gi
+vext
 
