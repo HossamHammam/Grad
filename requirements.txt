@@ -1,7 +1,6 @@
 streamlit_option_menu
 datetime
 gtts
-os
 firebase_admin
 opencv-python
 streamlit
