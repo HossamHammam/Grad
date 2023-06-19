@@ -198,7 +198,7 @@ threshold = 0.5
 # Initialize the Holistic model from the Mediapipe library with specified confidence thresholds
 with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
     # Start a loop to process each frame from the video capture
-    while cap1.state.playing):
+    while cap1.state.playing:
         # Read a frame from the video capture
         #ret, frame = cap.read()
 
