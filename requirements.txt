@@ -2,7 +2,7 @@ streamlit_option_menu
 datetime
 gtts
 firebase_admin
-opencv-python-headless
+python3-opencv
 streamlit
 numpy==1.24.3
 mediapipe==0.10.1
