@@ -1,8 +1,5 @@
 streamlit_option_menu
 datetime
 gtts
-playsound==1.2.2
 firebase_admin
-vext.gi
-vext
 
