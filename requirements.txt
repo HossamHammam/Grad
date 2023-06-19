@@ -3,7 +3,7 @@ datetime
 gtts
 firebase_admin
 opencv-python-headless
--m pip install --upgrade pip
+python -m pip install --upgrade pip
 streamlit
 numpy==1.24.3
 mediapipe==0.10.1
