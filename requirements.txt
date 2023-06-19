@@ -3,8 +3,8 @@ datetime
 gtts
 firebase_admin
 opencv-python-headless
-ffmpeg libsm6 libxext6 
-libgl1-mesa-glx 
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6 -y
 streamlit
 numpy==1.24.3
 mediapipe==0.10.1
