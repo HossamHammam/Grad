@@ -1,7 +1,6 @@
 import streamlit as st
 import firebase_admin
 from firebase_admin import db , credentials
-import pyautogui
 Z = st.empty()
 if not firebase_admin._apps:
         cred = credentials.Certificate('gradproj-976fe-firebase-adminsdk-uf9pv-0ef165c526.json')
