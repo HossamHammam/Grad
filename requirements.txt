@@ -3,7 +3,7 @@ datetime
 gtts
 firebase_admin
 opencv-python
-libgl1
+libgl1-mesa-glx
 streamlit
 numpy==1.24.3
 mediapipe==0.10.1
