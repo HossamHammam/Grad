@@ -1,6 +1,6 @@
 streamlit_option_menu
 datetime
 gtts
-playsound
+playsound==1.2.2
 firebase_admin
 
