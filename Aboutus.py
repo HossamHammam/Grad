@@ -2,7 +2,6 @@ import os
 from datetime import datetime
 import streamlit as st
 from gtts import gTTS
-from playsound import playsound
 st.empty
 st.write('Select the options you want')
 if st.button("LogOut"):
