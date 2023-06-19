@@ -2,4 +2,10 @@ streamlit_option_menu
 datetime
 gtts
 firebase_admin
-
+cv2
+streamlit
+numpy
+mediapipe
+tensorflow
+pyttsx3
+googletrans
