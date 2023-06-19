@@ -26,7 +26,7 @@ if selected == "Log in":
 
 if selected == "ASL Translator":
     if (int(Verr[Logged - 1])) == 1:
-        #exec(open('flask.py').read())
+        exec(open('flask.py').read())
         st.write(" Log ")
     else:
         st.write("Please Login First")

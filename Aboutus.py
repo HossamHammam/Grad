@@ -4,24 +4,11 @@ import streamlit as st
 from gtts import gTTS
 from playsound import playsound
 st.empty
-date_string = datetime.now().strftime("%d%m%Y%H%M%S")
 st.write('Select the options you want')
-option_1 = st.checkbox('Draw landmarks')
-option_2 = st.checkbox('prob viz')
-option_3 = st.checkbox('TTS')
 if st.button("LogOut"):
     f = open("vars.txt", "a")
     f.write(str(0))
     f.close()
-if(option_3):
-    if st.button("TTS"):
-        mytext = 'Is TTS working?!'
-        language = 'en'
-        myobj = gTTS(text=mytext, lang=language, slow=False)
-        Address = "Example"+date_string+".mp3"
-        myobj.save(Address)
-        playsound(Address)
-        os.remove(Address)
 
 
 

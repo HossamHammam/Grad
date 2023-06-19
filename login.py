@@ -27,7 +27,7 @@ def login():
     if st.button("Login"):
         x=db.reference("Number of Users").child("Number").get()
         print(x)
-        for x in range(1,x):
+        for x in range(1,x+1):
              if (db.reference("Users/").child(str(x)).get() == data1):
                 Verr=1
                 Ver = 1
