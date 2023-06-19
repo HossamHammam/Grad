@@ -7,7 +7,7 @@ from tensorflow import keras
 import tensorflow as tf
 import pyttsx3
 from googletrans import Translator
-
+from streamlit_webrtc import webrtc_streamer
 
 # Load the pre-trained model from the 'modelWeights.h5' file
 model = keras.models.load_model('modelWeights.h5')
@@ -256,10 +256,7 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
             cv2.putText(image, ' '.join(sentence), (3, 30),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
 
-        # Check if video capture has ended
-        if not ret:
-            st.write("Video Capture has ended")
-            break
+
 
         # Convert the image to RGB and display it in the Streamlit app
         frame1 = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -270,5 +267,4 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
             break
 
 # Release the video capture and close all windows
-cap.release()
 cv2.destroyAllWindows()
