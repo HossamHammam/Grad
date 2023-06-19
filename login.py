@@ -42,7 +42,6 @@ def login():
         if Ver == 1:
             st.success("Login successful!")
             st.write(f"Welcome, {username}!")
-            pyautogui.hotkey("ctrl","F5")
 
         else:
             st.error("Invalid username or password.")
