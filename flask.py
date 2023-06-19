@@ -148,9 +148,12 @@ def add_line_breaks(paragraph, line_length):
 #############################################
 #########  Streamlit page building  #########
 #############################################
-
+def video_frame_callback(frame):
+    img = frame.to_ndarray(format="bgr24")
+    return frame
 # Open video capture from the default camera (0)
 cap = cv2.VideoCapture(0)
+cap1 = webrtc_streamer(key="example", video_frame_callback=video_frame_callback)
 
 # List of languages for translation
 langs = ['en', 'ar', 'fr', 'es', 'de']
@@ -195,12 +198,12 @@ threshold = 0.5
 # Initialize the Holistic model from the Mediapipe library with specified confidence thresholds
 with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
     # Start a loop to process each frame from the video capture
-    while cap.isOpened():
+    while cap1.state.playing):
         # Read a frame from the video capture
-        ret, frame = cap.read()
+        #ret, frame = cap.read()
 
         # Make detections using the Holistic model
-        image, results = mediapipe_detection(frame, holistic)
+        image, results = mediapipe_detection(video_frame_callback, holistic)
 
         # Draw landmarks on the frame if landMarkBool is True
         if landMarkBool:
